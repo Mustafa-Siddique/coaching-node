@@ -17,12 +17,6 @@
   max-width: 500px;
 }
 
-/* Sign up Modal */
-.modal-open .container-fluid,
-.modal-open .container {
-  -webkit-filter: blur(10px) grayscale(70%); /* Blur for modal */
-}
-
 /* Home Page */
 #home-main-container {
   background-color: #eff2f6;

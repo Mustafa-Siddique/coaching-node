@@ -14,6 +14,6 @@ const userSchema = new Schema({
     token: String
 });
 
-const User = model('Customer', userSchema, 'customers');
+const User = model('User', userSchema);
 exports.Customers = User;
 

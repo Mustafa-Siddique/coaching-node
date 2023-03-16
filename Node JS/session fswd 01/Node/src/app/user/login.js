@@ -17,7 +17,7 @@ exports.login = (request, response) => {
         console.log("User found", user);
         if (user) {
           // Check if the password is correct
-          console.log("CHecking Password");
+          console.log("Checking Password");
           if (user.password === processedPassword) {
             // Sending token back to the user with the response
             const token = createHash(password + HASH_KEY);

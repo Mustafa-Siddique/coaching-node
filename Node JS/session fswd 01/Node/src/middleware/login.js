@@ -2,8 +2,9 @@ const { Customers } = require("./../../model/Customers");
 const { responseCreator } = require("../utils/responseCreator");
 
 exports.loginMiddleware = async (req, res, next) => {
-  const isExists = await Customers.exists({ email: req.body.email });
-  console.log(isExists);
+  const email = req.body.email;
+  const isExists = await Customers.exists({ email: email });
+  console.log(isExists, email);
   if (isExists !== null) {
     next();
   } else {

@@ -11,7 +11,8 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    token: String
+    token: String,
+    userType: String
 });
 
 const User = model('User', userSchema);

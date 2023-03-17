@@ -5,13 +5,14 @@ const { Customers } = require("../../../model/Customers");
 
 exports.signup = async (request, response) => {
   try {
-    const { name, phone, email, password } = request.body;
+    const { name, phone, email, password, user } = request.body;
     await Customers.create({
       name: name,
       phone: phone,
       email: email,
       token: createHash(password + HASH_KEY),
       password: createHash(password),
+      userType: user
     });
 
     const respObject = responseCreator("Signed up successfully");
